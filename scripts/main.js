@@ -12,32 +12,6 @@ buttonEl.addEventListener('click', ()=>{
 })
 
 
- 
-
-var mouseX, mouseY;
-
-catImgEl.addEventListener("mousemove", function(event) {
-  mouseX = event.clientX;
-  mouseY = event.clientY;
-});
-
-
-var eyeDistance = 30; // Припустима відстань між очима
-var eyeCenterX = catImgEl.offsetLeft + eyeDistance;
-var eyeCenterY = catImgEl.offsetTop + eyeDistance;
-
-var deltaX = mouseX - eyeCenterX;
-var deltaY = mouseY - eyeCenterY;
-var angle = Math.atan2(deltaY, deltaX);
-
-var leftEye = document.getElementById("leftEye");
-var rightEye = document.getElementById("rightEye");
-var eyeRotation = angle * (180 / Math.PI); // Перетворення радіан в градуси
-
-leftEye.style.transform = "rotate(" + eyeRotation + "deg)";
-rightEye.style.transform = "rotate(" + eyeRotation + "deg)";
-
-
 
 
 
